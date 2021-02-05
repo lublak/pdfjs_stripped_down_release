@@ -1,4 +1,4 @@
-# pdfjs_stripped_down_release_action
+# pdfjs-stripped-down-release-action
 
 Used for:
 
