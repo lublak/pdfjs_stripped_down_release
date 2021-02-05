@@ -3,7 +3,6 @@ const github = require('@actions/github');
 const semver = require('semver');
 const fs = require('fs');
 const path = require('path');
-
 const got = require('got');
 const tar = require('tar-stream');
 
@@ -33,7 +32,12 @@ try {
         stream.pipe(fs.createWriteStream(path.join(path.basename(header.name))));
       }
     });
+    extract.on('finish', function() {
+      core.setOutput('changed', true);
+    });
     got.stream(latestDistRelease.tarball).pipe(extract);
+  } else {
+    core.setOutput('changed', false);
   }
 } catch (error) {
   core.setFailed(error.message);

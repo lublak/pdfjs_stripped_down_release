@@ -10,6 +10,9 @@ inputs:
   dest:
     description: 'Output dir'
     default: '.'
+outputs:
+  changed:
+    description: 'If new version was avaible and created'
 branding:
   icon: "copy"
   color: "red"
