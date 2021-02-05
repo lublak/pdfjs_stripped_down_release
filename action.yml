@@ -1,0 +1,18 @@
+name: 'pdfjs stripped down release
+description: 'create a stripped down version of pdfjs'
+inputs:
+  token:
+    description: 'Personal access token'
+    default: ${{ github.token }}
+  use-es5:
+    description: 'Use the es5 build of pdfjs'
+    default: 'false'
+  dest:
+    description: 'Output dir'
+    default: '.'
+branding:
+  icon: "copy"
+  color: "red"
+runs:
+  using: 'node12'
+  main: 'index.js'
