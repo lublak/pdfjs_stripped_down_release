@@ -1,4 +1,4 @@
-name: 'pdfjs stripped down release
+name: 'pdfjs stripped down release'
 description: 'create a stripped down version of pdfjs'
 inputs:
   token:
